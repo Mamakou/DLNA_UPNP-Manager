@@ -36,5 +36,8 @@ manager.delegate = self;
 [[YMUpnpManager manager] playWithResult:^(YMUpnpResponse *response, BOOL success) {
         
 }];
- 
+///订阅后，通过callback设置的回调路径接收订阅消息，因为没有设备所以功能需要完善
+[[YMUpnpManager manager] sendSubcirbeWithTime:3600 callBack:@"回调" serverType:ServerTypeAVTransport result:^(BOOL success) {
+        
+}]; 
 ```
